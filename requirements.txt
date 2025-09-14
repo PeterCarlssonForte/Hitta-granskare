@@ -1,0 +1,8 @@
+streamlit
+requests
+pandas
+keybert
+sentence-transformers
+openpyxl
+torch
+transformers
