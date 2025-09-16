@@ -1,13 +1,13 @@
 import streamlit as st
 import requests
 import pandas as pd
-from keybert import KeyBERT
 import datetime
 from sentence_transformers import SentenceTransformer, util
+from keybert import KeyBERT
 
-# Initiera modeller
-kw_model = KeyBERT()
-embed_model = SentenceTransformer("all-MiniLM-L6-v2", device="cpu")  # Laddas på CPU
+# ---------- Initiera modeller på CPU ----------
+embed_model = SentenceTransformer("all-MiniLM-L6-v2", device="cpu")  # AI-sortering
+kw_model = KeyBERT(model=embed_model)  # KeyBERT använder redan laddad CPU-modell
 
 st.title("🔎 Hitta forskare för utlysning")
 
@@ -188,6 +188,7 @@ if st.button("✅ Hämta forskare"):
                     hide_index=True,
                     use_container_width=True
                 )
+
 
 
 
