@@ -1,9 +1,0 @@
-requests>=2.31
-openpyxl>=3.1
-numpy>=1.26
-scipy>=1.11
-scikit-learn>=1.3
-pypdf>=4.0
-python-docx>=1.1
-# Valfritt, för --embeddings i fordela.py:
-# sentence-transformers>=3.0
